@@ -166,10 +166,8 @@ each(names, function(item, indice){
 */
 
 const getUserById = (arr, id, cb) =>  {
-  for (let i = 0; i < arr.length; i++)  {
-    if (arr[i].id === id)
-      cb(arr[i])
-  }
+  let user = arr.map((v) => {return v.id}).indexOf(id);
+  cb(arr[user]);
 }
 
 // Do not edit the code below.
